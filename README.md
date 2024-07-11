@@ -54,39 +54,6 @@ The Tool Rental System Application is designed to facilitate the rental of vario
 4. **LaborDayRule**
    - Defines the rules for Labor Day holiday.
 
-## Project Structure
-
-src/
-|-- main/
-| |-- java/
-| | |-- com/example/toolrental/
-| | | |-- Main.java
-| | | |-- ShoppingCart.java
-| | | |-- ChargeProcessor.java
-| | | |-- HolidayProcessor.java
-| | | |-- LoggerConfig.java
-| | | |-- RentalAgreement.java
-| | | |-- ChargeRule.java
-| | | |-- ConfigFileType.java
-| | | |-- Tool.java
-| | | |-- ToolChargeConfig.java
-| | | |-- IndependenceDayRule.java
-| | | |-- LaborDayRule.java
-| |-- resources/
-| |-- config/
-| |-- tools.json
-| |-- tools.yaml
-|
-|-- test/
-| |-- java/
-| |-- com/example/toolrental/
-| |-- ChargeProcessorConfigTest.java
-| |-- ChargeProcessorTest.java
-| |-- HolidayProcessorTest.java
-| |-- RentalAgreementTest.java
-| |-- ShoppingCartTest.java
-| |-- ToolTest.java
-
 
 ## Getting Started
 
