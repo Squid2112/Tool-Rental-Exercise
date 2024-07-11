@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: com.example.toolrental.RentalAgreementTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.318 s <<< FAILURE! - in com.example.toolrental.RentalAgreementTest
+testLadderRentalAgreement  Time elapsed: 0.284 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1.99> but was: <0.0>
+	at com.example.toolrental.RentalAgreementTest.testLadderRentalAgreement(RentalAgreementTest.java:39)
+
+testJackhammerRentalAgreementRidgid  Time elapsed: 0.005 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <2.99> but was: <0.0>
+	at com.example.toolrental.RentalAgreementTest.testJackhammerRentalAgreementRidgid(RentalAgreementTest.java:106)
+
+testChainsawRentalAgreement  Time elapsed: 0.009 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <2> but was: <3>
+	at com.example.toolrental.RentalAgreementTest.testChainsawRentalAgreement(RentalAgreementTest.java:63)
+
+testJackhammerRentalAgreementDeWalt  Time elapsed: 0.006 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <2.99> but was: <0.0>
+	at com.example.toolrental.RentalAgreementTest.testJackhammerRentalAgreementDeWalt(RentalAgreementTest.java:84)
+
