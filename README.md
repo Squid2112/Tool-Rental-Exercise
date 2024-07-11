@@ -66,7 +66,7 @@ The Tool Rental System Application is designed to facilitate the rental of vario
 
 1. Clone the repository:
 
-  git clone https://github.com/yourusername/tool-rental-system.git
+  https://github.com/Squid2112/jg0724.git
 
 2. Navigate to the project directory:
 
