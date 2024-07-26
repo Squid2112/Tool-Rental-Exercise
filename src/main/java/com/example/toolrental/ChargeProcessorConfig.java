@@ -65,7 +65,7 @@ public class ChargeProcessorConfig {
             ChargeRule rule = new ChargeRule(
                     toolCharge.getToolCode(),
                     toolCharge.getToolType(),
-                    toolCharge.getBrand(),
+                    toolCharge.getToolBrand(),
                     toolCharge.getWeekdayCharge(),
                     toolCharge.getWeekendCharge(),
                     toolCharge.getHolidayCharge(),

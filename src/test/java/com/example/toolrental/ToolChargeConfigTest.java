@@ -40,7 +40,7 @@ public class ToolChargeConfigTest {
         ToolChargeConfig.ToolCharge toolCharge1 = new ToolChargeConfig.ToolCharge();
         toolCharge1.setToolCode("LADW");
         toolCharge1.setToolType("Ladder");
-        toolCharge1.setBrand("Werner");
+        toolCharge1.setToolBrand("Werner");
         toolCharge1.setWeekdayCharge(BigDecimal.valueOf(1.99));
         toolCharge1.setWeekendCharge(BigDecimal.valueOf(1.99));
         toolCharge1.setHolidayCharge(BigDecimal.ZERO);
@@ -48,7 +48,7 @@ public class ToolChargeConfigTest {
         ToolChargeConfig.ToolCharge toolCharge2 = new ToolChargeConfig.ToolCharge();
         toolCharge2.setToolCode("CHNS");
         toolCharge2.setToolType("Chainsaw");
-        toolCharge2.setBrand("Stihl");
+        toolCharge2.setToolBrand("Stihl");
         toolCharge2.setWeekdayCharge(BigDecimal.valueOf(1.49));
         toolCharge2.setWeekendCharge(BigDecimal.ZERO);
         toolCharge2.setHolidayCharge(BigDecimal.valueOf(1.49));
@@ -63,7 +63,7 @@ public class ToolChargeConfigTest {
         ToolChargeConfig.ToolCharge retrievedToolCharge1 = retrievedTools.get(0);
         assertEquals("LADW", retrievedToolCharge1.getToolCode());
         assertEquals("Ladder", retrievedToolCharge1.getToolType());
-        assertEquals("Werner", retrievedToolCharge1.getBrand());
+        assertEquals("Werner", retrievedToolCharge1.getToolBrand());
         assertEquals(BigDecimal.valueOf(1.99), retrievedToolCharge1.getWeekdayCharge());
         assertEquals(BigDecimal.valueOf(1.99), retrievedToolCharge1.getWeekendCharge());
         assertEquals(BigDecimal.ZERO, retrievedToolCharge1.getHolidayCharge());
@@ -71,7 +71,7 @@ public class ToolChargeConfigTest {
         ToolChargeConfig.ToolCharge retrievedToolCharge2 = retrievedTools.get(1);
         assertEquals("CHNS", retrievedToolCharge2.getToolCode());
         assertEquals("Chainsaw", retrievedToolCharge2.getToolType());
-        assertEquals("Stihl", retrievedToolCharge2.getBrand());
+        assertEquals("Stihl", retrievedToolCharge2.getToolBrand());
         assertEquals(BigDecimal.valueOf(1.49), retrievedToolCharge2.getWeekdayCharge());
         assertEquals(BigDecimal.ZERO, retrievedToolCharge2.getWeekendCharge());
         assertEquals(BigDecimal.valueOf(1.49), retrievedToolCharge2.getHolidayCharge());

@@ -48,7 +48,7 @@ public class ChargeProcessor {
 
     private void logChargeRules() {
         for (ChargeRule rule : chargeRules) {
-            logger.log(Level.INFO, "ChargeProcessor initialized with rule: {0}, {1}, {2}", new Object[]{rule.getToolCode(), rule.getToolType(), rule.getBrand()});
+            logger.log(Level.INFO, "ChargeProcessor initialized with rule: {0}, {1}, {2}", new Object[]{rule.getToolCode(), rule.getToolType(), rule.getToolBrand()});
         }
     }
 
@@ -70,6 +70,7 @@ public class ChargeProcessor {
             }
         }
         logger.log(Level.INFO, "Total Charge: {0}", totalCharge);
-        return totalCharge.round(new MathContext(2, RoundingMode.HALF_UP));
+        return totalCharge.setScale(2, RoundingMode.HALF_UP);
     }
+    
 }

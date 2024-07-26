@@ -46,7 +46,7 @@ public class ToolTest {
     }
 
     @Test
-    public void testGetBrand() {
-        assertEquals("Stihl", tool.getBrand());
+    public void testGetToolBrand() {
+        assertEquals("Stihl", tool.getToolBrand());
     }
 }

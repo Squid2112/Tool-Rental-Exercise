@@ -30,7 +30,7 @@ public class ToolChargeConfig {
 
         private String toolCode;
         private String toolType;
-        private String brand;
+        private String toolBrand;
         private BigDecimal weekdayCharge;
         private BigDecimal weekendCharge;
         private BigDecimal holidayCharge;
@@ -51,12 +51,12 @@ public class ToolChargeConfig {
             this.toolType = toolType;
         }
 
-        public String getBrand() {
-            return brand;
+        public String getToolBrand() {
+            return toolBrand;
         }
 
-        public void setBrand(String brand) {
-            this.brand = brand;
+        public void setToolBrand(String toolBrand) {
+            this.toolBrand = toolBrand;
         }
 
         public BigDecimal getWeekdayCharge() {

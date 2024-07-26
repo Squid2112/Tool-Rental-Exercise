@@ -13,7 +13,7 @@
  * Components:
  * - toolCode: Unique identifier for the tool.
  * - toolType: Type of the tool.
- * - brand: Brand of the tool.
+ * - toolBrand: Brand of the tool.
  * - weekdayCharge: Charge rate for weekdays.
  * - weekendCharge: Charge rate for weekends.
  * - holidayCharge: Charge rate for holidays.
@@ -38,16 +38,16 @@ public class ChargeRule {
 
     private final String toolCode;
     private final String toolType;
-    private final String brand;
+    private final String toolBrand;
     private final BigDecimal weekdayCharge;
     private final BigDecimal weekendCharge;
     private final BigDecimal holidayCharge;
     private final HolidayProcessor holidayProcessor;
 
-    public ChargeRule(String toolCode, String toolType, String brand, BigDecimal weekdayCharge, BigDecimal weekendCharge, BigDecimal holidayCharge, HolidayProcessor holidayProcessor) {
+    public ChargeRule(String toolCode, String toolType, String toolBrand, BigDecimal weekdayCharge, BigDecimal weekendCharge, BigDecimal holidayCharge, HolidayProcessor holidayProcessor) {
         this.toolCode = toolCode;
         this.toolType = toolType;
-        this.brand = brand;
+        this.toolBrand = toolBrand;
         this.weekdayCharge = weekdayCharge;
         this.weekendCharge = weekendCharge;
         this.holidayCharge = holidayCharge;
@@ -62,8 +62,8 @@ public class ChargeRule {
         return toolType;
     }
 
-    public String getBrand() {
-        return brand;
+    public String getToolBrand() {
+        return toolBrand;
     }
 
     public BigDecimal getWeekdayCharge() {
@@ -105,7 +105,7 @@ public class ChargeRule {
             charge = weekdayCharge;
         }
 
-        logger.log(Level.INFO, "Date: {0}, Charge: {1}, Tool Code: {2}, Tool Type: {3}, Brand: {4}", new Object[]{date, charge, toolCode, toolType, brand});
+        logger.log(Level.INFO, "Date: {0}, Charge: {1}, Tool Code: {2}, Tool Type: {3}, Tool Brand: {4}", new Object[]{date, charge, toolCode, toolType, toolBrand});
         return charge;
     }
 }

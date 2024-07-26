@@ -18,7 +18,7 @@
  * - testMultipleHolidays: Verifies the applies method for multiple holidays.
  * - testGetToolCode: Verifies the retrieval of the tool code.
  * - testGetToolType: Verifies the retrieval of the tool type.
- * - testGetBrand: Verifies the retrieval of the tool brand.
+ * - testGetToolBrand: Verifies the retrieval of the tool brand.
  * - testGetWeekdayCharge: Verifies the retrieval of the weekday charge.
  * - testGetWeekendCharge: Verifies the retrieval of the weekend charge.
  * - testGetHolidayCharge: Verifies the retrieval of the holiday charge.
@@ -105,8 +105,8 @@ public class ChargeRuleTest {
     }
 
     @Test
-    public void testGetBrand() {
-        assertEquals("Werner", chargeRule.getBrand());
+    public void testGetToolBrand() {
+        assertEquals("Werner", chargeRule.getToolBrand());
     }
 
     @Test

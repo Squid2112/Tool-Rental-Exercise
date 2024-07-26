@@ -29,7 +29,7 @@ public class ShoppingCart {
         this.chargeProcessor = chargeProcessor;
     }
 
-    public void addTool(String toolCode, String toolType, String brand, int rentalDays, int discountPercent, int quantity, LocalDate checkOutDate) {
+    public void addTool(String toolCode, String toolType, String toolBrand, int rentalDays, int discountPercent, int quantity, LocalDate checkOutDate) {
         if (rentalDays < 1) {
             throw new IllegalArgumentException("Rental day count must be 1 or greater");
         }
@@ -37,7 +37,7 @@ public class ShoppingCart {
             throw new IllegalArgumentException("Discount percent must be between 0 and 100");
         }
 
-        rentals.add(new ToolRental(toolCode, toolType, brand, rentalDays, discountPercent, quantity, checkOutDate));
+        rentals.add(new ToolRental(toolCode, toolType, toolBrand, rentalDays, discountPercent, quantity, checkOutDate));
     }
 
     public List<RentalAgreement> checkout() {
@@ -46,7 +46,7 @@ public class ShoppingCart {
             RentalAgreement agreement = new RentalAgreement(
                     rental.getToolCode(),
                     rental.getToolType(),
-                    rental.getBrand(),
+                    rental.getToolBrand(),
                     rental.getRentalDays(),
                     rental.getCheckOutDate(),
                     rental.getDiscountPercent(),
@@ -121,16 +121,16 @@ public class ShoppingCart {
 
         private final String toolCode;
         private final String toolType;
-        private final String brand;
+        private final String toolBrand;
         private final int rentalDays;
         private final int discountPercent;
         private final int quantity;
         private final LocalDate checkOutDate;
 
-        public ToolRental(String toolCode, String toolType, String brand, int rentalDays, int discountPercent, int quantity, LocalDate checkOutDate) {
+        public ToolRental(String toolCode, String toolType, String toolBrand, int rentalDays, int discountPercent, int quantity, LocalDate checkOutDate) {
             this.toolCode = toolCode;
             this.toolType = toolType;
-            this.brand = brand;
+            this.toolBrand = toolBrand;
             this.rentalDays = rentalDays;
             this.discountPercent = discountPercent;
             this.quantity = quantity;
@@ -145,8 +145,8 @@ public class ShoppingCart {
             return toolType;
         }
 
-        public String getBrand() {
-            return brand;
+        public String getToolBrand() {
+            return toolBrand;
         }
 
         public int getRentalDays() {

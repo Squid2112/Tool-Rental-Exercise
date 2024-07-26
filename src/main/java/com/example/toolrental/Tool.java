@@ -15,13 +15,13 @@ public class Tool {
 
     private final String toolCode;
     private final String toolType;
-    private final String brand;
+    private final String toolBrand;
 
     // Constructor
-    public Tool(String toolCode, String toolType, String brand) {
+    public Tool(String toolCode, String toolType, String toolBrand) {
         this.toolCode = toolCode;
         this.toolType = toolType;
-        this.brand = brand;
+        this.toolBrand = toolBrand;
     }
 
     // Getters and Setters
@@ -33,7 +33,7 @@ public class Tool {
         return toolType;
     }
 
-    public String getBrand() {
-        return brand;
+    public String getToolBrand() {
+        return toolBrand;
     }
 }

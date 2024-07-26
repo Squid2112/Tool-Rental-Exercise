@@ -46,7 +46,7 @@ public class RentalAgreementTest {
         // Log loaded charge rules
         System.out.println("Loaded charge rules:");
         for (ChargeRule rule : chargeRules) {
-            System.out.println("Tool Code: " + rule.getToolCode() + ", Tool Type: " + rule.getToolType() + ", Brand: " + rule.getBrand());
+            System.out.println("Tool Code: " + rule.getToolCode() + ", Tool Type: " + rule.getToolType() + ", Tool Brand: " + rule.getToolBrand());
         }
     }
 
