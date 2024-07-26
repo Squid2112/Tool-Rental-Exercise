@@ -15,6 +15,8 @@
 package com.example.toolrental;
 
 import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -104,15 +106,15 @@ public class RentalAgreement {
     }
 
     private BigDecimal calculatePreDiscountCharge(int chargeDays, BigDecimal dailyRentalCharge, int quantity) {
-        return dailyRentalCharge.multiply(BigDecimal.valueOf(chargeDays)).multiply(BigDecimal.valueOf(quantity)).setScale(2, BigDecimal.ROUND_HALF_UP);
+        return dailyRentalCharge.multiply(BigDecimal.valueOf(chargeDays)).multiply(BigDecimal.valueOf(quantity)).round(new MathContext(2, RoundingMode.HALF_UP));
     }
 
     private BigDecimal calculateDiscountAmount(BigDecimal preDiscountCharge, int discountPercent) {
-        return preDiscountCharge.multiply(BigDecimal.valueOf(discountPercent)).divide(BigDecimal.valueOf(100)).setScale(2, BigDecimal.ROUND_HALF_UP);
+        return preDiscountCharge.multiply(BigDecimal.valueOf(discountPercent)).divide(BigDecimal.valueOf(100), new MathContext(2, RoundingMode.HALF_UP));
     }
 
     private BigDecimal calculateFinalCharge(BigDecimal preDiscountCharge, BigDecimal discountAmount) {
-        return preDiscountCharge.subtract(discountAmount).setScale(2, BigDecimal.ROUND_HALF_UP);
+        return preDiscountCharge.subtract(discountAmount).round(new MathContext(2, RoundingMode.HALF_UP));
     }
 
     public void printAgreement(int agreementNumber) {
