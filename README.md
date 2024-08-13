@@ -1,5 +1,3 @@
-# jg0724
-
 # Tool Rental System Application
 
 ## Overview
