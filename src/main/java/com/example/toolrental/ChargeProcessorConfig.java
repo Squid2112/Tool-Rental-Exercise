@@ -39,7 +39,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class ChargeProcessorConfig {
 
-//    private static final Logger logger = LoggerConfig.getLogger();
     private static final String CONFIG_PATH = "src/main/resources/config/";
 
     public static List<ChargeRule> getChargeRules(ConfigFileType configType, String configFileName, HolidayProcessor holidayProcessor) throws IOException {
